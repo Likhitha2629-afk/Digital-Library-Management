@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Library Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Login Section -->
+    <div id="loginSection" class="card">
+        <h1>📚 Digital Library Management</h1>
+
+        <input type="text" id="username" placeholder="Enter Username">
+
+        <input type="password" id="password" placeholder="Enter Password">
+
+        <button onclick="login()">Login</button>
+
+        <p id="loginMessage"></p>
+    </div>
+
+    <!-- Library Dashboard -->
+    <div id="librarySection" class="card hidden">
+
+        <div class="header">
+            <h2>📚 Library Dashboard</h2>
+
+            <button onclick="logout()">Logout</button>
+        </div>
+
+        <!-- Search -->
+        <div class="searchBox">
+            <input
+                type="text"
+                id="searchBook"
+                placeholder="Search Book..."
+                onkeyup="searchBook()"
+            >
+        </div>
+
+        <!-- Add Book -->
+        <div class="bookForm">
+            <h3>Add New Book</h3>
+
+            <input
+                type="text"
+                id="bookTitle"
+                placeholder="Book Title"
+            >
+
+            <input
+                type="text"
+                id="bookAuthor"
+                placeholder="Author Name"
+            >
+
+            <button onclick="addBook()">
+                Add Book
+            </button>
+        </div>
+
+        <!-- Available Books -->
+        <div class="bookList">
+
+            <h3>Available Books</h3>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+
+                </thead>
+
+                <tbody id="bookTable">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
